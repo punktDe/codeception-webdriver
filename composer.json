@@ -1,0 +1,12 @@
+{
+    "description": "",
+    "name": "punktde/codeception-webdriver",
+    "require-dev": {
+        "codeception/codeception": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PunktDe\\Codeception\\Webdriver\\": "Classes/"
+      }
+    }
+}
