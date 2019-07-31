@@ -1,5 +1,5 @@
 {
-    "description": "",
+    "description": "This package provides gherkin steps for the codeception webdriver module",
     "name": "punktde/codeception-webdriver",
     "require-dev": {
         "codeception/codeception": "*"
