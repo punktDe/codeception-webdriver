@@ -10,9 +10,8 @@ namespace PunktDe\Codeception\Webdriver\ActorTraits;
  */
 
 trait Webdriver {
-    
     use Checks;
     use Controls;
-    use Cookies;
+    use Cookie;
     use Switchers;
 }
