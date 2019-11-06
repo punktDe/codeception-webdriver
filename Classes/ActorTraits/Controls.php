@@ -119,6 +119,16 @@ trait Controls {
     }
 
     /**
+     * @Given I click on :element inside element :container
+     * @param string $element
+     * @param string $container
+     */
+    public function iClickOnInsideElement(string $element, string $container): void
+    {
+        $this->click($element, $container);
+    }
+
+    /**
      * @Then I execute JS :script
      * @param string $script
      */
