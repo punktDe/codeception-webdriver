@@ -2,8 +2,9 @@
     "description": "This package provides gherkin steps for the codeception webdriver module",
     "name": "punktde/codeception-webdriver",
     "license": "GPL-3.0-or-later",
-    "require-dev": {
-        "codeception/codeception": "*"
+    "require": {
+        "codeception/codeception": "^4.0",
+        "codeception/module-webdriver": "^1.0"
     },
     "autoload": {
         "psr-4": {
