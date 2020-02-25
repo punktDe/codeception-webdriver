@@ -18,7 +18,11 @@ trait Controls {
      */
     public function iAmOn(string $page): void
     {
-        $this->amOnPage($page);
+        if (strpos($page, 'http') === 0) {
+            $this->amOnUrl($page);
+        } else {
+            $this->amOnPage($page);
+        }
     }
 
     /**
