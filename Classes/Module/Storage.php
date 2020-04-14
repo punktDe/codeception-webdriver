@@ -48,4 +48,16 @@ class Storage extends Module
 
         Assert::assertNotEquals($this->textStorage, $actual, 'Text is equal but should not be');
     }
+
+    /**
+     * @param string $selector
+     * @throws ModuleException
+     */
+    public function elementTextShouldBeEqualToStore(string $selector): void
+    {
+        $webdriver = $this->getModule('WebDriver');
+        $actual = $webdriver->grabTextFrom($selector);
+
+        Assert::assertEquals($this->textStorage, $actual, 'Text is not equal but should be');
+    }
 }

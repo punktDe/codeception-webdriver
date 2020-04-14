@@ -35,4 +35,13 @@ trait Storage {
     {
          $this->elementTextShouldNotBeEqualToStore($selector);
     }
+
+    /**
+     * @Given the text in the :selector element should be equal from memorized
+     * @param string $selector
+     */
+    public function elementTextShouldBeEqualFromMemorized(string $selector): void
+    {
+         $this->elementTextShouldBeEqualToStore($selector);
+    }
 }
