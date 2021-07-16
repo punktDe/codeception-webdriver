@@ -27,7 +27,6 @@ trait Controls {
 
     /**
      * @Given I wait for the text :text
-     * @Given /^I wait for the text (?P<pattern>"(?:[^"]|\\")*")$/
      * @param string $text
      */
     public function iWaitForTheText(string $text): void
