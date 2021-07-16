@@ -1,4 +1,4 @@
-# punktde/codeception-database
+# punktde/codeception-webdriver
 
 ## Gherkin Steps and additional module functions for the Codeception Webdriver module
 
@@ -8,12 +8,11 @@
 
 Use the module `PunktDe\Codeception\Webdriver\Module\Storage` in your `codeception.yaml`:
 
-```
+```yaml
 modules:
    enabled:
       - PunktDe\Codeception\Webdriver\Module\Storage
 ```
-
 
 #### Gherkin steps
 
@@ -27,10 +26,9 @@ to switch between frames or windows. Or if you only need some of the functionali
 
 The trait to use the storage module is all by itself, you have to include that even if you included the complete `PunktDe\Codeception\Webdriver\ActorTraits\Webdriver` trait.
 
+##### Example actor
 
-##### Example actor 
-
-```
+```php
 <?php
 
 /*
@@ -59,19 +57,14 @@ class AcceptanceTester extends \Codeception\Actor
     use \PunktDe\Codeception\Webdriver\ActorTraits\Webdriver; // use the webdriver steps trait
     use \PunktDe\Codeception\Webdriver\ActorTraits\Storage; // use the storage steps trait
 }
-``` 
+```
 
-##### Which steps are there? 
+##### Which steps are there?
 
 To get all the steps available you can just run the following command:
 
-```
+```bash
 vendor/bin/codecept -c path/to/codeception.yaml gherkin:steps suiteName
 ```
 
 This will give you a table of all the steps available.
-
-
-
-
-
