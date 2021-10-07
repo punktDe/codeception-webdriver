@@ -49,11 +49,13 @@ trait Controls {
 
     /**
      * @Given I click on :element
+     * @Given I click on :element within :context
      * @param string $element
+     * @param string|null $context
      */
-    public function iClickOn(string $element): void
+    public function iClickOn(string $element, string $context = null): void
     {
-        $this->click($element);
+        $this->click($element, $context);
     }
 
     /**
