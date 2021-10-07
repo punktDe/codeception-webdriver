@@ -27,9 +27,11 @@ trait Controls {
 
     /**
      * @Given I wait for the text :text
+     * @Given I wait for the text :text in :seconds seconds
      * @param string $text
+     * @param int $seconds
      */
-    public function iWaitForTheText(string $text): void
+    public function iWaitForTheText(string $text, int $seconds = 10): void
     {
         $text = str_replace('\\', '', $text);
         $this->waitForText($text);
