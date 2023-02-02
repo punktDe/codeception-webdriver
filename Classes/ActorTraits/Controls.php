@@ -29,12 +29,12 @@ trait Controls {
      * @Given I wait for the text :text
      * @Given I wait for the text :text in :seconds seconds
      * @param string $text
-     * @param int $seconds
+     * @param int|string $seconds
      */
-    public function iWaitForTheText(string $text, int $seconds = 10): void
+    public function iWaitForTheText(string $text, int|string $seconds = 10): void
     {
         $text = str_replace('\\', '', $text);
-        $this->waitForText($text);
+        $this->waitForText($text, (int)$seconds);
     }
 
     /**
@@ -89,9 +89,9 @@ trait Controls {
 
     /**
      * @Given I wait for :seconds seconds
-     * @param int $seconds
+     * @param int|string $seconds
      */
-    public function iWaitForSeconds(int $seconds): void
+    public function iWaitForSeconds(int|string $seconds): void
     {
         $this->wait($seconds);
     }
@@ -175,11 +175,11 @@ trait Controls {
     /**
      * @Then I wait for invisible :selector in :seconds
      * @param string $selector
-     * @param int $seconds
+     * @param int|string $seconds
      */
-    public function iWaitForElementNotVisible(string $selector, int $seconds): void
+    public function iWaitForElementNotVisible(string $selector, int|string $seconds): void
     {
-        $this->waitForElementNotVisible($selector, $seconds);
+        $this->waitForElementNotVisible($selector, (int)$seconds);
     }
 
 }

@@ -104,12 +104,12 @@ trait Checks {
 
     /**
      * @Given I should see :expected :selector elements
-     * @param int $expected
+     * @param int|string $expected
      * @param string $selector
      */
-    public function seeNElements(int $expected, string $selector)
+    public function seeNElements(int|string $expected, string $selector)
     {
-        $this->seeNumberOfElements($selector, $expected);
+        $this->seeNumberOfElements($selector, (int)$expected);
     }
 
     /**
