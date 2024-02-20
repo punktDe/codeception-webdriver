@@ -103,6 +103,26 @@ trait Checks {
     }
 
     /**
+     * @param $selector
+     * @param $optionText
+     * @Given I should see :selector with :optionText is selected
+     */
+    public function optionIsSelected($selector, $optionText)
+    {
+        $this->seeOptionIsSelected($selector, $optionText);
+    }
+
+    /**
+     * @param $selector
+     * @param $optionText
+     * @Given I see :selector with :optionText is not selected
+     */
+    public function optionIsNotSelected($selector, $optionText)
+    {
+        $this->dontSeeOptionIsSelected($selector, $optionText);
+    }
+
+    /**
      * @Given I should see :expected :selector elements
      * @param int|string $expected
      * @param string $selector
