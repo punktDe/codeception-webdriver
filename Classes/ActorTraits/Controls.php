@@ -182,4 +182,13 @@ trait Controls {
         $this->waitForElementNotVisible($selector, (int)$seconds);
     }
 
+    /**
+     * @param string $text
+     * @return void
+     * @Given I type :text
+     */
+    public function iType(string $text): void
+    {
+        $this->type($text);
+    }
 }
