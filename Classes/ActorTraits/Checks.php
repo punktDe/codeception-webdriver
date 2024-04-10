@@ -151,6 +151,16 @@ trait Checks {
     }
 
     /**
+     * @Then I should not see :text in :element element
+     * @param string $text
+     * @param string $selector
+     */
+    public function iShouldNotSeeTextInElement(string $text, string $selector): void
+    {
+        $this->dontSee($text, $selector);
+    }
+
+    /**
      * @Then I should see at least :number :selector elements
      * @param string $number
      * @param string $selector
