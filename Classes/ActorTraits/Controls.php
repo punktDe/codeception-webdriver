@@ -191,4 +191,17 @@ trait Controls {
     {
         $this->type($text);
     }
+
+    /**
+     * @param string $selector
+     * @param int $offsetX
+     * @param int $offsetY
+     * @return void
+     * @Given I scroll to :selector
+     * @Given I scroll to :selector with offset :offsetX and :offsetY
+     */
+    public function iScroll(string $selector, int $offsetX = 0, int $offsetY = 0): void
+    {
+        $this->scrollTo($selector, $offsetX, $offsetY);
+    }
 }
