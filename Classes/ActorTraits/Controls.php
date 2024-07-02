@@ -38,6 +38,19 @@ trait Controls {
     }
 
     /**
+     * @Given I wait for the text :text in :element element
+     * @Given I wait for the text :text in :element element in :seconds seconds
+     * @param string $text
+     * @param string $element
+     * @param int|string $seconds
+     */
+    public function iWaitForTheTextInElement(string $text, string $element, int|string $seconds = 10): void
+    {
+        $text = str_replace('\\', '', $text);
+        $this->waitForText($text, (int)$seconds, (string)$element);
+    }
+
+    /**
      * @Given I fill in :field with :value
      * @param string $field
      * @param string $value
