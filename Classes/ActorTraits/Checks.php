@@ -66,6 +66,15 @@ trait Checks {
     }
 
     /**
+     * @Given I should not see link with the text :text
+     * @param string $text
+     */
+    public function iDontSeeLink(string $text)
+    {
+        $this->dontSeeLink($text);
+    }
+
+    /**
      * @Given I should see :text in page source
      * @param string $text
      */
@@ -168,6 +177,16 @@ trait Checks {
     public function iShouldSeeMinNumberOfElements(string $number, string $selector): void
     {
         $this->seeNumberOfElements($selector, [$number, PHP_INT_MAX]);
+    }
+
+    /**
+     * @Then I should have :number windows opened
+     *
+     * @param string $number
+     */
+    public function iShouldHaveNumberOfWindows(string $number): void
+    {
+        $this->seeNumberOfTabs((int)$number);
     }
 
 }
