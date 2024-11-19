@@ -217,4 +217,15 @@ trait Controls {
     {
         $this->scrollTo($selector, $offsetX, $offsetY);
     }
+
+    /**
+     * @param string $width
+     * @param string $height
+     * @return void
+     * @Given I set window size to :width x :height
+     */
+    public function iSetWindowSize(string $width, string $height)
+    {
+        $this->resizeWindow((int)$width, (int)$height);
+    }
 }
