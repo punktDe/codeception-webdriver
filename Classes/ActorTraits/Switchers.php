@@ -20,6 +20,15 @@ trait Switchers {
     }
 
     /**
+     * Switches back from an iFrame to the main document
+     * @Given I switch back to parent-frame
+     */
+    public function iSwitchBackToParentFrame(): void
+    {
+        $this->switchToIFrame();
+    }
+    
+    /**
      * @param string $window
      * @Given I switch to Window :window
      */

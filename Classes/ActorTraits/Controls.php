@@ -186,6 +186,14 @@ trait Controls {
     }
 
     /**
+     * @Given I wait for element :selector to be visible in :seconds
+     */
+    public function iWaitForElementToBeVisible(string $selector,int|string $seconds): void
+    {
+        $this->waitForElementVisible($selector, (int)$seconds);
+    }
+    
+    /**
      * @Then I wait for invisible :selector in :seconds
      * @param string $selector
      * @param int|string $seconds
