@@ -66,7 +66,7 @@ trait Controls {
      * @param string $element
      * @param string|null $context
      */
-    public function iClickOn(string $element, string $context = null): void
+    public function iClickOn(string $element, ?string $context = null): void
     {
         $this->click($element, $context);
     }
